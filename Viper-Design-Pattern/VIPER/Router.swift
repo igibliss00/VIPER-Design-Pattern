@@ -9,25 +9,26 @@ import UIKit
 
 typealias EntryPoint = AnyView & UIViewController
 
-protocol AnyRouter: AnyObject {
+protocol AnyRouter {
     var entry: EntryPoint? { get }
     static func start() ->  AnyRouter
 }
 
 class UserRouter: AnyRouter {
-    weak var entry: EntryPoint?
+    var entry: EntryPoint?
     
     static func start() -> AnyRouter {
         let router = UserRouter()
         
         // Assign VIP
-        let view: AnyView = UserViewController()
-        let presenter: AnyPresenter = UserPresenter()
-        let interactor: AnyInteractor = UserInteractor()
+        var view: AnyView = UserViewController()
+        var presenter: AnyPresenter = UserPresenter()
+        var interactor: AnyInteractor = UserInteractor()
         
         view.presenter = presenter
         
         interactor.presenter = presenter
+        print("interactor.presenter", interactor.presenter)
         
         presenter.router = router
         presenter.view = view
