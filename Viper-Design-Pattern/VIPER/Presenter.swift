@@ -20,7 +20,7 @@ protocol AnyPresenter {
 }
 
 class UserPresenter: AnyPresenter {
-    var router: AnyRouter?
+    var router: AnyRouter? /// Holds on to the router so that you can route to a sub-router
     var interator: AnyInteractor? {
         didSet {
             interator?.getUsers()
@@ -29,14 +29,11 @@ class UserPresenter: AnyPresenter {
     var view: AnyView?
     
     func interactorDidFetchUsers(with result: Result<[User], Error>) {
-        print("result", result)
         switch result {
         case .success(let users):
-            print("users", users)
             view?.update(with: users)
         case .failure:
             view?.update(with: "Something went wrong")
         }
     }
-
 }

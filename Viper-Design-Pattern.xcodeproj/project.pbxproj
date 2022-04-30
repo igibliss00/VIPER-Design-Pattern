@@ -15,6 +15,7 @@
 		0F19FEB5281D9EF500C67D03 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19FEB4281D9EF500C67D03 /* Presenter.swift */; };
 		0F19FEB7281D9EFC00C67D03 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19FEB6281D9EFC00C67D03 /* Entity.swift */; };
 		0F19FEB9281D9F0600C67D03 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19FEB8281D9F0600C67D03 /* Router.swift */; };
+		0F19FEBB281DBD3A00C67D03 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F19FEBA281DBD3A00C67D03 /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		0F19FEB4281D9EF500C67D03 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0F19FEB6281D9EFC00C67D03 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		0F19FEB8281D9F0600C67D03 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0F19FEBA281DBD3A00C67D03 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		0F19FEBC281DBE0800C67D03 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +66,10 @@
 				0F19FEAF281D9E8200C67D03 /* VIPER */,
 				0F19FE9B281D9E1200C67D03 /* AppDelegate.swift */,
 				0F19FE9D281D9E1200C67D03 /* SceneDelegate.swift */,
+				0F19FEBA281DBD3A00C67D03 /* 1.png */,
 				0F19FEA4281D9E1A00C67D03 /* Assets.xcassets */,
 				0F19FEA9281D9E1A00C67D03 /* Info.plist */,
+				0F19FEBC281DBE0800C67D03 /* README.md */,
 			);
 			path = "Viper-Design-Pattern";
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F19FEA5281D9E1A00C67D03 /* Assets.xcassets in Resources */,
+				0F19FEBB281DBD3A00C67D03 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ protocol AnyView {
 }
 
 class UserViewController: UIViewController, AnyView {
-    var presenter: AnyPresenter?
+    var presenter: AnyPresenter? /// Holds on to the presenter for instances like presenting a pop up alert view controller
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -25,6 +25,13 @@ class UserViewController: UIViewController, AnyView {
     
     var users: [User] = []
     
+    private let label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.isHidden = true
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -33,6 +40,8 @@ class UserViewController: UIViewController, AnyView {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+        label.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        label.center = view.center
     }
     
     private func configureUI() {
@@ -40,6 +49,9 @@ class UserViewController: UIViewController, AnyView {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        view.addSubview(label)
+        label.isHidden = true
     }
     
     func update(with users: [User]) {
@@ -51,7 +63,12 @@ class UserViewController: UIViewController, AnyView {
     }
     
     func update(with error: String) {
-        
+        DispatchQueue.main.async {
+            self.users = []
+            self.label.text = error
+            self.tableView.isHidden = true
+            self.label.isHidden = false
+        }
     }
     
 }

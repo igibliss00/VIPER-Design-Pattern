@@ -28,7 +28,6 @@ class UserRouter: AnyRouter {
         view.presenter = presenter
         
         interactor.presenter = presenter
-        print("interactor.presenter", interactor.presenter)
         
         presenter.router = router
         presenter.view = view
