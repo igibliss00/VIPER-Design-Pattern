@@ -47,6 +47,8 @@
 		0F19FE8F281D9E1200C67D03 = {
 			isa = PBXGroup;
 			children = (
+				0F19FEBA281DBD3A00C67D03 /* 1.png */,
+				0F19FEBC281DBE0800C67D03 /* README.md */,
 				0F19FE9A281D9E1200C67D03 /* Viper-Design-Pattern */,
 				0F19FE99281D9E1200C67D03 /* Products */,
 			);
@@ -66,10 +68,8 @@
 				0F19FEAF281D9E8200C67D03 /* VIPER */,
 				0F19FE9B281D9E1200C67D03 /* AppDelegate.swift */,
 				0F19FE9D281D9E1200C67D03 /* SceneDelegate.swift */,
-				0F19FEBA281DBD3A00C67D03 /* 1.png */,
 				0F19FEA4281D9E1A00C67D03 /* Assets.xcassets */,
 				0F19FEA9281D9E1A00C67D03 /* Info.plist */,
-				0F19FEBC281DBE0800C67D03 /* README.md */,
 			);
 			path = "Viper-Design-Pattern";
 			sourceTree = "<group>";
